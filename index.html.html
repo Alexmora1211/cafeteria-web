@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CafeEDEC Express | Pedidos rápidos campus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fc;
+            color: #1e2a3e;
+            padding-bottom: 80px;
+        }
+
+        /* Barra superior */
+        .header {
+            background: linear-gradient(135deg, #0a2b4e, #1e4a76);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .lobo-icon {
+            font-size: 2.5rem;
+        }
+
+        /* Menú de navegación */
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            padding: 12px 10px;
+            border-bottom: 2px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #0a2b4e;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 6px 12px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: #0a2b4e;
+            color: white;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Tarjetas de productos */
+        .menu-item {
+            background: white;
+            border-radius: 24px;
+            padding: 16px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.01);
+        }
+
+        .img-placeholder {
+            width: 70px;
+            height: 70px;
+            background: #d9e6f5;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .info {
+            flex: 1;
+        }
+
+        .info h3 {
+            font-size: 1.2rem;
+        }
+
+        .precio {
+            color: #1e4a76;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn-pedir {
+            background-color: #0a2b4e;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .btn-pedir:hover {
+            background-color: #2c6e9e;
+        }
+
+        /* Sección de pedido favorito */
+        .favoritos {
+            background: #eef2ff;
+            border-radius: 28px;
+            padding: 18px;
+            margin-top: 20px;
+        }
+
+        .tiempo {
+            background: #ffe6cc;
+            padding: 12px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #5a6e85;
+            font-size: 0.8rem;
+        }
+
+        button {
+            background: #0a2b4e;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 40px;
+            width: 100%;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="lobo-icon">🐺</div>
+    <h1>CafeEDEC Express</h1>
+    <p>Pide en 3 clics • Sin filas • Pago digital</p>
+</div>
+
+<div class="nav">
+    <a href="#">🍔 Menú</a>
+    <a href="#">⭐ Favoritos</a>
+    <a href="#">📦 Mi pedido</a>
+    <a href="#">👤 Mi cuenta</a>
+</div>
+
+<div class="container">
+    <div class="tiempo">
+        ⏱️ Tiempo estimado ahora: <strong>8-12 min</strong>
+    </div>
+
+    <h2>🔥 Menú del día</h2>
+
+    <div class="menu-item">
+        <div class="img-placeholder">🌮</div>
+        <div class="info">
+            <h3>Tacos de canasta (3 pzas)</h3>
+            <p>Papa, frijol, adobo</p>
+        </div>
+        <div class="precio">$45</div>
+        <button class="btn-pedir">Pedir</button>
+    </div>
+
+    <div class="menu-item">
+        <div class="img-placeholder">🍔</div>
+        <div class="info">
+            <h3>Hamburguesa EDEC</h3>
+            <p>Con queso, lechuga, tomate</p>
+        </div>
+        <div class="precio">$75</div>
+        <button class="btn-pedir">Pedir</button>
+    </div>
+
+    <div class="menu-item">
+        <div class="img-placeholder">🥪</div>
+        <div class="info">
+            <h3>Torta de pierna</h3>
+            <p>La favorita del campus</p>
+        </div>
+        <div class="precio">$60</div>
+        <button class="btn-pedir">Pedir</button>
+    </div>
+
+    <div class="menu-item">
+        <div class="img-placeholder">🥤</div>
+        <div class="info">
+            <h3>Jamaica + agua fresca</h3>
+            <p>Refill 1 vez</p>
+        </div>
+        <div class="precio">$25</div>
+        <button class="btn-pedir">Pedir</button>
+    </div>
+
+    <div class="favoritos">
+        <h3>⭐ Tus pedidos favoritos</h3>
+        <p>🔁 Torta de pierna + Jamaica</p>
+        <p>🔁 Hamburguesa EDEC + papas</p>
+        <button>➕ Guardar este pedido</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+        <h3>💳 Pago rápido</h3>
+        <button>Pagar con tarjeta</button>
+        <button>Transferencia</button>
+        <button>Saldo en app</button>
+    </div>
+
+    <div style="margin-top: 20px; background: #f1f5f9; border-radius: 20px; padding: 15px;">
+        <h3>📊 Califica tu comida</h3>
+        <p>⭐ ⭐ ⭐ ⭐ ⭐</p>
+        <textarea placeholder="Escribe una sugerencia..." rows="2" style="width:100%; border-radius: 16px; padding: 8px;"></textarea>
+        <button>Enviar opinión</button>
+    </div>
+</div>
+
+<footer>
+    🐺 CafeEDEC Express | Campus Revolución NL<br>
+    ¿Problemas? Escribe a cafeteria@edec.edu
+</footer>
+
+<script>
+    // Simulación de notificación y pedido
+    const botones = document.querySelectorAll('.btn-pedir');
+    botones.forEach(btn => {
+        btn.addEventListener('click', () => {
+            alert('✅ Pedido agregado. Recibirás notificación cuando esté listo.');
+        });
+    });
+</script>
+
+</body>
+</html>
